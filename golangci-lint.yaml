@@ -22,15 +22,15 @@ run:
 linters:
   disable-all: true
   enable:
-    - gofmt 
-    - goimports 
+    - gofmt
+    - goimports
     - govet # general analysis of possible bugs
     - goconst # find strings that could be constants
-    - funlen 
-    - bodyclose 
-    - errcheck 
+    - funlen
+    - bodyclose
+    - errcheck
     - deadcode # unused code
-    - exportloopref 
+    - exportloopref
 
 
 linters-settings:
@@ -41,7 +41,7 @@ linters-settings:
     check-shadowing: true
   goconst:
     min-len: 2
-    min-occurrences: 2    
+    min-occurrences: 2
   funlen:
     # fun up to 100 lines or 50 operations
     lines: 100
