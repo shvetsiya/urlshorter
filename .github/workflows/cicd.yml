@@ -2,6 +2,7 @@ name: CI
 
 on:
   push:
+    branches: [ main ]
   pull_request:
     branches: [ main ]
 
@@ -17,6 +18,13 @@ jobs:
           version: v1.39
           args: -v
           only-new-issues: true
+
+  pre-commit:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-python@v2
+    - uses: pre-commit/action@v2.0.2
 
   test:
     runs-on: ubuntu-latest
